@@ -3,12 +3,12 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import { CONSTANT } from './constant';
 
 function AppBlogs() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("http://192.168.1.68:8080/api/articles").then((data) => {
+    axios.get(`${CONSTANT.URL}/api/articles`).then((data) => {
       setData(data.data.data);
     })
   }, []);
