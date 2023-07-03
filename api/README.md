@@ -17,7 +17,7 @@ In the project directory, you can run:
 ## Database setup
 
 
-## 
+``` 
  
 package models
 import (
@@ -34,7 +34,7 @@ func ConnectDatabase() {
 	database.AutoMigrate(&Comment{}).AddForeignKey("article_id", "articles(id)", "RESTRICT", "RESTRICT")
 	DB = database
 }
-
+```
 
 ## Run Go Project
 
